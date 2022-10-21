@@ -26,7 +26,6 @@ const getTransactionsByType = async (types, data) => {
     if (!types[0]) {
         throw new Error('type should provided on getTransactionsByType');
     }
-    // const data = await (await axios.get(dataApi))?.data;
     const result = data?.transactions.filter(item => types.indexOf(item.transactionType) !== -1)
     return result;
 }
@@ -35,7 +34,6 @@ const getTransactionsByName = async (names, data) => {
     if (!names[0]) {
         throw new Error('name should provided on getTransactionsByType');
     }
-    // const data = await (await axios.get(dataApi))?.data;
     const result = data?.transactions?.filter(item => names.indexOf(item.accountName) !== -1)
     return result;
 }
@@ -44,7 +42,6 @@ const getTransactionsByTypeAndName = async (types, names, data) => {
     if (!types[0] || !names[0]) {
         throw new Error('name and type should provided on getTransactionsByType');
     }
-    // const data = await (await axios.get(dataApi))?.data;
     const result = data?.transactions?.filter(item => names.indexOf(item.accountName) !== -1 && types.indexOf(item.transactionType) !== -1)
     return result;
 }

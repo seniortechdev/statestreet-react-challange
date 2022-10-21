@@ -93,7 +93,7 @@ const PaginatedItems = ({ itemsPerPage, items }) => {
     return (
         <>
             <div className='w-full max-h-[78vh] relative overflow-y-scroll'>
-                {currentItems && currentItems.map((transaction) => <TransactionSection transaction={transaction} />)}
+          {currentItems && currentItems.map((transaction) => <TransactionSection transaction={transaction} key={ transaction.account } />)}
             </div>
             <div className='flex items-center w-full justify-center mt-16'>
                 <ReactPaginate

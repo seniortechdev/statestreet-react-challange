@@ -10,7 +10,7 @@ const Transaction = () => {
         if (id) {
             getTransactionsByIdData()
         }
-    }, [id])
+    },)
 
     const getTransactionsByIdData = async () => {
         const data = await getTransactionsById(id)
